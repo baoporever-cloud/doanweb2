@@ -1,7 +1,10 @@
 body {
-  background-color: #050814;
-  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #0d1017;
+  color: #ffffff;
 }
+
 /* ===========================
    HEADER
    =========================== */
@@ -43,9 +46,9 @@ body {
 }
 
 .logo-text {
-  color: #ffffff;
   font-weight: 700;
-  text-shadow: 0px 0px 6px rgba(0,255,255,0.4);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .nav {
@@ -99,189 +102,160 @@ body {
 .btn-primary:hover {
   filter: brightness(1.05);
 }
-
-/* PAGE NẠP TIỀN */
-.topup-page {
-  padding: 30px 0 40px;
-  color: #fff;
+/* ===== PAGE LMHT GIẢM GIÁ ===== */
+.sale-page {
+  background-color: #050709;
+  color: #ffffff;
 }
 
-.topup-inner {
+/* banner text trên cùng */
+.sale-banner {
+  background-color: #111111;
+  padding: 12px 0;
+  border-bottom: 1px solid #222;
+}
+
+.sale-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 16px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
 }
 
-.topup-left,
-.topup-right {
-  flex: 1;
-  min-width: 280px;
+.sale-title,
+.sale-sub {
+  text-align: center;
+  margin: 0;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
-/* Tiêu đề + mô tả */
-.topup-left h1 {
-  margin: 0 0 6px;
+.sale-title {
+  font-weight: 700;
+}
+
+.sale-sub {
+  margin-top: 4px;
+}
+
+.hl-yellow {
+  color: #ffc107;
+  font-weight: 700;
+}
+
+/* heading */
+.sale-heading {
+  margin: 18px 0 16px;
   font-size: 22px;
   text-transform: uppercase;
 }
 
-.topup-desc {
-  margin: 0 0 14px;
-  font-size: 13px;
-  color: #cfd6ff;
+/* grid acc */
+.sale-accounts {
+  padding: 10px 0 30px;
 }
 
-/* Tabs */
-.topup-tabs {
-  display: inline-flex;
-  border-radius: 4px;
-  overflow: hidden;
-  border: 1px solid #22263a;
-  margin-bottom: 12px;
+.acc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
 }
 
-.topup-tab {
-  padding: 8px 16px;
-  font-size: 13px;
-  cursor: pointer;
-  border: none;
-  background-color: #111520;
-  color: #cfd6ff;
-  text-transform: uppercase;
+/* card acc */
+.acc-card {
+  background-color: #000000;
+  border: 1px solid #222222;
+  padding: 8px 8px 12px;
+  color: #ffffff;
 }
 
-.topup-tab.active {
-  background: linear-gradient(90deg, #00b4ff, #00ffb2);
-  color: #06101f;
-  font-weight: 700;
-}
-
-/* Form nạp thẻ */
-.topup-form {
-  background-color: #111520;
-  border-radius: 4px;
-  padding: 14px 16px;
-  border: 1px solid #22263a;
-}
-
-.topup-form .form-row {
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.topup-form label {
-  font-size: 13px;
-}
-
-.topup-form select,
-.topup-form input {
-  padding: 7px 9px;
-  border-radius: 3px;
-  border: 1px solid #2c3148;
-  background-color: #0f1320;
-  color: #e5e5e5;
-  font-size: 13px;
-  outline: none;
-}
-
-.btn-topup {
-  margin-top: 4px;
-  width: 100%;
-  padding: 9px 0;
-  border-radius: 3px;
-  border: none;
-  background: linear-gradient(90deg, #00b4ff, #00ffb2);
-  color: #06101f;
-  font-weight: 700;
-  font-size: 14px;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.btn-topup:hover {
-  filter: brightness(1.05);
-}
-
-/* Box hướng dẫn momo */
-.topup-momo {
-  background-color: #111520;
-  border-radius: 4px;
-  padding: 14px 16px;
-  border: 1px solid #22263a;
-  font-size: 13px;
-}
-
-.topup-momo h2 {
-  margin-top: 0;
-  font-size: 18px;
+/* header acc */
+.acc-header {
+  border: 1px solid #00ffbf;
+  padding: 6px 10px;
   margin-bottom: 8px;
+  color: #00ffbf;
+  font-size: 14px;
 }
 
-.topup-momo p {
-  margin: 4px 0;
+/* ảnh */
+.acc-img-wrap {
+  background-color: #111111;
+  border: 3px solid #111111;
+  padding: 3px;
 }
 
-/* Cột phải */
-.topup-box {
-  background-color: #111520;
-  border-radius: 4px;
-  padding: 14px 16px;
-  border: 1px solid #22263a;
-  margin-bottom: 14px;
+.acc-img-wrap img {
+  width: 100%;
+  display: block;
 }
 
-.topup-box h2 {
-  margin: 0 0 8px;
-  font-size: 18px;
-  text-transform: uppercase;
+/* info */
+.acc-info {
+  background-color: #111111;
+  border-top: 1px solid #222222;
+  padding: 8px 10px;
+  margin-top: 8px;
+  font-size: 13px;
 }
 
-.topup-box ul {
+.acc-info ul {
+  list-style: disc;
   margin: 0;
   padding-left: 18px;
-  font-size: 13px;
 }
 
-.topup-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
-  margin-top: 4px;
-}
-
-.topup-table th,
-.topup-table td {
-  padding: 6px 8px;
-  border: 1px solid #22263a;
-  text-align: center;
-}
-
-.topup-table th {
-  background-color: #151a2b;
-}
-
-.topup-note {
+/* giá */
+.acc-price {
   margin-top: 8px;
-  font-size: 12px;
-  color: #ffcd4b;
+  font-size: 14px;
 }
 
-/* helper */
-.hidden {
-  display: none !important;
+.card-price {
+  color: #ff3b3b;
+  font-weight: 700;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .topup-inner {
-    flex-direction: column;
-  }
+.atm-price {
+  color: #ff3b3b;
+  margin-left: 4px;
 }
+
+/* nút */
+.acc-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.btn-acc {
+  flex: 1;
+  padding: 7px 0;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.btn-view {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.btn-buy {
+  background-color: #e53935;
+  color: #ffffff;
+}
+
+.btn-view:hover {
+  background-color: #f0f0f0;
+}
+
+.btn-buy:hover {
+  background-color: #c62828;
+}
+
 /* ===========================
    RESPONSIVE
    =========================== */

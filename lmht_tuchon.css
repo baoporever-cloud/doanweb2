@@ -1,7 +1,17 @@
-body {
-  background-color: #050814;
-  font-family: 'Montserrat', sans-serif;
+/* RESET NHẸ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #0d1017;
+  color: #ffffff;
+}
+
 /* ===========================
    HEADER
    =========================== */
@@ -43,9 +53,9 @@ body {
 }
 
 .logo-text {
-  color: #ffffff;
   font-weight: 700;
-  text-shadow: 0px 0px 6px rgba(0,255,255,0.4);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .nav {
@@ -99,187 +109,93 @@ body {
 .btn-primary:hover {
   filter: brightness(1.05);
 }
+/* ===========================
+   PAGE LIÊN MINH TỰ CHỌN
+   =========================== */
 
-/* PAGE NẠP TIỀN */
-.topup-page {
-  padding: 30px 0 40px;
-  color: #fff;
+/* SECTION danh sách gói giá */
+.lmht-list {
+  padding: 24px 0 32px;
 }
 
-.topup-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 16px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-}
-
-.topup-left,
-.topup-right {
-  flex: 1;
-  min-width: 280px;
-}
-
-/* Tiêu đề + mô tả */
-.topup-left h1 {
-  margin: 0 0 6px;
-  font-size: 22px;
+.lmht-list h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
   text-transform: uppercase;
 }
 
-.topup-desc {
-  margin: 0 0 14px;
-  font-size: 13px;
-  color: #cfd6ff;
+/* GRID các card giá */
+.lmht-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
 }
 
-/* Tabs */
-.topup-tabs {
-  display: inline-flex;
-  border-radius: 4px;
-  overflow: hidden;
-  border: 1px solid #22263a;
-  margin-bottom: 12px;
+/* CARD từng mức giá */
+.lmht-card {
+  background-color: #000;          /* giống screenshot: khối đen */
+  border: 1px solid #222;
+  padding: 10px 10px 16px;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(0,0,0,0.6);
 }
 
-.topup-tab {
-  padding: 8px 16px;
-  font-size: 13px;
-  cursor: pointer;
-  border: none;
-  background-color: #111520;
-  color: #cfd6ff;
-  text-transform: uppercase;
-}
-
-.topup-tab.active {
-  background: linear-gradient(90deg, #00b4ff, #00ffb2);
-  color: #06101f;
+/* Thanh tiêu đề giá: DƯỚI 100K, 100K - 500K... */
+.lmht-tag {
+  background-color: #000;
+  border: 1px solid #00ffbf;
+  color: #00ffbf;
   font-weight: 700;
-}
-
-/* Form nạp thẻ */
-.topup-form {
-  background-color: #111520;
-  border-radius: 4px;
-  padding: 14px 16px;
-  border: 1px solid #22263a;
-}
-
-.topup-form .form-row {
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.topup-form label {
-  font-size: 13px;
-}
-
-.topup-form select,
-.topup-form input {
-  padding: 7px 9px;
-  border-radius: 3px;
-  border: 1px solid #2c3148;
-  background-color: #0f1320;
-  color: #e5e5e5;
-  font-size: 13px;
-  outline: none;
-}
-
-.btn-topup {
-  margin-top: 4px;
-  width: 100%;
-  padding: 9px 0;
-  border-radius: 3px;
-  border: none;
-  background: linear-gradient(90deg, #00b4ff, #00ffb2);
-  color: #06101f;
-  font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
+  padding: 8px;
+  margin: 0 4px 10px;
   text-transform: uppercase;
-  cursor: pointer;
-}
-
-.btn-topup:hover {
-  filter: brightness(1.05);
-}
-
-/* Box hướng dẫn momo */
-.topup-momo {
-  background-color: #111520;
-  border-radius: 4px;
-  padding: 14px 16px;
-  border: 1px solid #22263a;
-  font-size: 13px;
-}
-
-.topup-momo h2 {
-  margin-top: 0;
-  font-size: 18px;
-  margin-bottom: 8px;
-}
-
-.topup-momo p {
-  margin: 4px 0;
-}
-
-/* Cột phải */
-.topup-box {
-  background-color: #111520;
-  border-radius: 4px;
-  padding: 14px 16px;
-  border: 1px solid #22263a;
-  margin-bottom: 14px;
-}
-
-.topup-box h2 {
-  margin: 0 0 8px;
-  font-size: 18px;
-  text-transform: uppercase;
-}
-
-.topup-box ul {
-  margin: 0;
-  padding-left: 18px;
-  font-size: 13px;
-}
-
-.topup-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
-  margin-top: 4px;
-}
-
-.topup-table th,
-.topup-table td {
-  padding: 6px 8px;
-  border: 1px solid #22263a;
   text-align: center;
 }
 
-.topup-table th {
-  background-color: #151a2b;
+/* Khung ảnh trong card */
+/* Card ảnh trong danh mục game */
+.lmht-img-wrap {
+  height: 220px;          /* chiều cao tối đa bạn muốn (có thể chỉnh 200–260) */
+  overflow: hidden;       /* cắt bớt phần thừa */
 }
 
-.topup-note {
+/* Ảnh bên trong */
+.lmht-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* phóng ảnh vừa khung, không méo */
+}
+
+
+/* Nút "Xem tất cả" */
+.lmht-btn {
   margin-top: 8px;
-  font-size: 12px;
-  color: #ffcd4b;
+  padding: 7px 18px;
+  border-radius: 4px;
+  border: none;
+  background-color: #ffffff;
+  color: #000;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
-/* helper */
-.hidden {
-  display: none !important;
+.lmht-btn:hover {
+  background-color: #f0f0f0;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .topup-inner {
-    flex-direction: column;
+  .lmht-hero h1 {
+    font-size: 20px;
+  }
+
+  .lmht-grid {
+    gap: 12px;
   }
 }
 /* ===========================
@@ -406,3 +322,5 @@ body {
     display: flex;
   }
 }
+
+

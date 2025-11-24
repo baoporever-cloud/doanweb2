@@ -280,16 +280,19 @@ body {
 }
 
 /* viền trong như khung screenshot */
+/* Card ảnh trong danh mục game */
 .card-img-wrap {
-  border: 4px solid #111;
-  padding: 4px;
-  margin-bottom: 10px;
+  height: 220px;          /* chiều cao tối đa bạn muốn (có thể chỉnh 200–260) */
+  overflow: hidden;       /* cắt bớt phần thừa */
 }
 
+/* Ảnh bên trong */
 .card-img-wrap img {
   width: 100%;
-  display: block;
+  height: 100%;
+  object-fit: cover;      /* phóng ảnh vừa khung, không méo */
 }
+
 
 /* tên gói acc */
 .game-card h3 {

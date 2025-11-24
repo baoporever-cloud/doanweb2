@@ -248,3 +248,127 @@ body {
     grid-template-columns: 1fr;
   }
 }
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+@media (max-width: 768px) {
+  .topbar-inner {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav {
+    justify-content: center;
+  }
+
+  .filters-container {
+    flex-direction: column;
+  }
+
+  #btnFilter {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .accounts-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
+.auth .btn {
+  padding: 8px 16px;
+  background: linear-gradient(90deg, #00b3ff, #00ffd1);
+  border-radius: 6px;
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  transition: .2s;
+}
+
+.auth .btn:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+.custom-footer {
+  background: #0a0a0a;
+  padding: 35px 20px;
+  color: #bfbfbf;
+  font-size: 15px;
+}
+
+.footer-row {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+.custom-footer p {
+  margin: 6px 0;
+}
+
+.yellow {
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+.white {
+  color: #fff;
+  font-weight: 700;
+}
+
+/* Hộp hotline */
+.footer-box {
+  display: flex;
+  align-items: center;
+  background: #151515;
+  border: 1px solid #333;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.icon-call {
+  font-size: 28px;
+  margin-right: 10px;
+  color: #ffcc00;
+}
+
+/* Social Icon */
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.social-icons img:hover {
+  transform: scale(1.15);
+}
+
+/* Responsive */
+@media(max-width: 768px){
+  .footer-row{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-box{
+    justify-content: center;
+  }
+
+  .social-icons{
+    justify-content: center;
+    display: flex;
+  }
+}
