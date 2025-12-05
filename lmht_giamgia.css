@@ -179,14 +179,14 @@ body {
 
 /* ảnh */
 .acc-img-wrap {
-  background-color: #111111;
-  border: 3px solid #111111;
-  padding: 3px;
+  height: 220px;          /* chiều cao tối đa bạn muốn (có thể chỉnh 200–260) */
+  overflow: hidden; 
 }
 
 .acc-img-wrap img {
-  width: 100%;
-  display: block;
+   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* info */
@@ -379,4 +379,63 @@ body {
     justify-content: center;
     display: flex;
   }
+}
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    width: 550px;
+    padding: 20px;
+    border-radius: 10px;
+    color: black;
+    position: relative;
+    animation: show 0.25s ease-out;
+}
+
+@keyframes show {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.info-box, .detail-box {
+    background: #f5f5f5;
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.input-discount {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.confirm-btn {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #ffaa00;
+    color: white;
+    font-size: 17px;
+    border-radius: 5px;
+    cursor: pointer;
 }

@@ -179,14 +179,14 @@ body {
 
 /* ảnh */
 .acc-img-wrap {
-  background-color: #111111;
-  border: 3px solid #111111;
-  padding: 3px;
+  height: 220px;          /* chiều cao tối đa bạn muốn (có thể chỉnh 200–260) */
+  overflow: hidden;
 }
 
 .acc-img-wrap img {
   width: 100%;
-  display: block;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* info */

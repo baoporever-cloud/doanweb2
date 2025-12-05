@@ -99,7 +99,7 @@ function renderAccounts(list) {
 
 function handleFilter() {
   const keyword = document.getElementById("keyword").value.trim().toLowerCase();
-  const game = document.getElementById("game").value;
+  const game = document.getElementById("group-title").value;
   const rank = document.getElementById("rank").value;
   const priceRange = document.getElementById("price").value;
 
