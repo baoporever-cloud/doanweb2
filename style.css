@@ -75,10 +75,3 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
-.info-box1, .detail-box1 {
-    background: #f5f5f5;
-    padding: 12px;
-    border-radius: 6px;
-    margin-top: 10px;
-    text-align: left;
-}
