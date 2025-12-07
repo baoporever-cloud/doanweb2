@@ -1,8 +1,8 @@
 body {
-  margin: 0;
-  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background-color: #0d1017;
-  color: #ffffff;
+    background: #0d0f16;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
 }
 /* ===========================
    HEADER
@@ -101,125 +101,101 @@ body {
 .btn-primary:hover {
   filter: brightness(1.05);
 }
-.pettim-page {
-  padding: 20px 0;
+.container {
+    display: flex;
+    gap: 25px;
+    padding: 30px;
+    width: 90%;
+    margin: auto;
 }
 
-.pettim-banner {
-  background-color: #181818;
-  padding: 5px 20px;
-  text-align: center;
+.left .preview {
+   width: 100%;         /* Cho rộng tối đa khung */
+    max-width: 900px;    /* Tăng chiều ngang tùy bạn */
+    height: 500px;        /* Giữ nguyên tỷ lệ, KHÔNG kéo dài dọc */
+    border-radius: 10px;
+    display: block;
+}
+.left {
+    flex: 1;
+   max-width: 950px;
+}
+.right {
+    width: 450px;
 }
 
-.pettim-title {
-  font-size: 30px;
-  font-weight: bold;
-  margin-bottom: 10px;
+.right h2 {
+    margin-top: 0;
 }
 
-.pettim-sub {
-  font-size: 18px;
-  color: #888;
+.id span {
+    color: red;
+    font-weight: bold;
 }
 
-.pettim-list {
-  padding: 30px 0;
+.status-box {
+    background: #eef2ff;
+    padding: 15px;
+    border-radius: 6px;
+    color: #000;
+    margin: 15px 0;
+    line-height: 26px;
 }
 
-.pettim-heading {
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 30px;
+.blue {
+    color: #0066ff;
 }
 
-.pettim-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 ô / dòng */
-    gap: 20px; /* khoảng cách giữa các ô */
-    width: 100%;
+.info-grid {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column; /* xuống từng dòng */
+    gap: 12px;
+    font-size: 18px;
 }
 
-.pettim-card {
-  background-color: #222;
-  padding: 20px;
-  border: 1px solid #444;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease-in-out;
-}
-.pettim-header {
-  font-size: 18px;
-  color: #fff;
-  margin-bottom: 10px;
-  text-align: center;
-}
-/* ảnh */
-.pettim-img-wrap {
-  height: 220px;          /* chiều cao tối đa bạn muốn (có thể chỉnh 200–260) */
-  overflow: hidden;
-}
-.pettim-img-wrap img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
+.info-grid div {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #333;
 }
 
-.pettim-info {
-  font-size: 14px;
-  color: #ccc;
+
+.prices {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
-.pettim-info ul {
-  list-style-type: none;
-  padding: 0;
+.prices .card {
+    color: #ff3333;
+    font-size: 22px;
+    font-weight: bold;
 }
 
-.pettim-info li {
-  margin: 5px 0;
+.prices .atm {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
 }
 
-.pettim-actions {
-  text-align: center;
-  margin-top: 10px;
+.buy-btn {
+    margin-top: 25px;
+    background: #ff9800;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff;
 }
 
-.btn-pettim {
-  padding: 10px 20px;
-  background-color: #00bfff;
-  border: none;
-  color: white;
-  text-transform: uppercase;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 14px;
+.buy-btn:hover {
+    background: #f47c00;
 }
-
-.btn-pettim:hover {
-  background-color: #0277bd;
-}
-
-footer .custom-footer {
-  background-color: #101010;
-  padding: 20px;
-  color: #ccc;
-  text-align: center;
-}
-
-footer .footer-row {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-
-footer .social-icons img {
-  width: 32px;
-  margin: 0 5px;
-  transition: 0.3s;
-}
-
-footer .social-icons img:hover {
-  transform: scale(1.15);
-}
-
 /* ===========================
    RESPONSIVE
    =========================== */
@@ -361,45 +337,4 @@ footer .social-icons img:hover {
     color: black;
     position: relative;
     animation: show 0.25s ease-out;
-}
-
-@keyframes show {
-    from { transform: scale(0.8); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-
-.close {
-    position: absolute;
-    right: 15px;
-    top: 10px;
-    font-size: 25px;
-    cursor: pointer;
-}
-
-.info-box {
-    background: #f5f5f5;
-    padding: 12px;
-    border-radius: 6px;
-    margin-top: 10px;
-    text-align: left;
-}
-
-.input-discount {
-    width: 100%;
-    padding: 10px;
-    margin-top: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.confirm-btn {
-    margin-top: 15px;
-    width: 100%;
-    padding: 12px;
-    border: none;
-    background: #ffaa00;
-    color: white;
-    font-size: 17px;
-    border-radius: 5px;
-    cursor: pointer;
 }
